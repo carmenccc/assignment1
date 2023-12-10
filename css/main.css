@@ -250,7 +250,7 @@ img{
 
 .required::after {
     content: " *";
-    color: red;
+    color: rgb(194, 0, 0);
 }
 
 input{
@@ -261,15 +261,14 @@ input[type=submit]{
     margin: 2rem 0 2rem 0;
     padding: 0.5rem;
     font-size: 0.8rem;
-    background-color: coral;
+    background-color: rgb(184, 51, 3);
     color: white;
     font-variant: small-caps;
-    border: 0.1rem solid coral;
 }
 
 input[type=submit]:hover{
     
-    background-color: rgb(231, 120, 80);
+    background-color: rgb(210, 89, 45);
     cursor: pointer;
 }
 
