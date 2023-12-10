@@ -1,65 +1,163 @@
 /*Huiwen Cai 8922586*/
+html {
+    font: normal normal normal 20px/30px 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 body { 
-	width: 80vw;
-    max-width: 1100px;
+	width: 90vw;
     margin: auto;
-    font: normal normal normal 16px/30px 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0 5vw 0 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.structural{
+    margin: 1rem;
+    padding: 1rem;
 }
 
 header, footer {
-    border: 20px solid rgb(76, 88, 137);
-    border-radius: 5px;
-    padding: 0 10px 0 10px;
-    margin: 0 10px 0 10px;
+    border: 0rem solid rgb(76, 88, 137);
+    background-image: linear-gradient(90deg, rgb(51, 75, 101) 0%, rgb(51, 120, 146) 80%, rgb(254, 137, 20)100%);
+    padding: 0.7rem;
+}
+
+h1 {
+    color: rgb(255, 142, 100);
+    font-variant: small-caps;
+}
+
+h2{
+    color: rgb(176, 102, 75);
+    font-variant: small-caps; 
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 footer {
     clear: both
 }
 
-h1, h2 {
-    color: rgb(10, 56, 148);
-    font-variant: small-caps;
-}
-
 footer p {
     font-size: small;
-    color:rgb(55, 123, 212);
+    color:rgba(216,236,243,1);
+}
+
+nav  {
+    background: rgba(216,236,243,1);  
+}
+
+nav ul{
+    padding-left: 50%;
+    margin: 0;
+}
+
+nav ul li {
+    font-weight: 900;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 23%;
+    font-size: 0.8rem;
+    border-left: rgb(176, 102, 75) solid 1px;
+    border-right: rgb(176, 102, 75) solid 1px;
+    padding: 0.1rem;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(51, 75, 101);
+}
+
+nav ul li ul.dropdown {
+    background: rgba(216,236,243,1);  
+    width: 100%;
+    position: absolute;
+    display: none;
+    padding:0;
+}
+
+nav ul li ul.dropdown li {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav ul a:hover {
+    background-color: rgba(57,86,118,1);
+}
+
+#layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 main {
-    float: left;
-    width: 60%;
-    padding: 0 3% 0 3%;
-    margin: 2%;
+    flex: 2 1 80%;
 }
 
 aside {
-    float: right;
-    width: 20%;
-    padding: 0 3% 0 3%;
-    margin: 2%;
+    flex: 1 1 20%;
+    background: url(../images/starry_header.jpg);
+    background-size: 100%;
 }
 
-.mainimg {
-    border: 10px solid rgb(55, 123, 212);
+aside h2{
+    color: rgb(255, 181, 154);
+}
+
+aside ul li {
+    list-style-type: none;
+    line-height:2rem;
+}
+
+aside li a {
+    color: white;
+}
+
+.transbox{
+    background-color: rgb(43, 88, 125);
+    opacity: 0.9;
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
+#mainimg {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 12rem;
 }
 
 figcaption{
-    font-weight: bold;
     font-variant:small-caps;
+    font-weight: bold;
+    color: rgb(104, 104, 104);
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 q {
     font-family: cursive;
     font-style: italic;
-    font-size: 20px;
-}
-
-ul li {
-    list-style-type: none;
-    line-height:36px;
 }
 
 li>a {
@@ -69,4 +167,160 @@ li>a {
 
 a:hover {
     color:coral;
+}
+
+table {
+    border-collapse: collapse;
+    caption-side: top;
+    border: 0.2rem solid rgb(60, 89, 142);
+    margin: auto;
+}
+
+table caption{
+    font-weight: 600;
+    color: rgb(176, 102, 75);
+}
+
+tbody tr{
+    border-bottom: 0.2rem solid cornflowerblue;
+}
+
+th {
+    background-color: aliceblue;
+    padding: 0.5rem;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+tr:hover > th, tr:hover > td {
+    background-color: cornflowerblue;
+}
+
+#gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.gallery-grid-item{
+    margin: 1rem;
+}
+
+img{
+    width : 100%;
+}
+
+#img1 {
+    clip-path: polygon(-1.67% 102.53%, -2.78% -0.7%, 103.71% 16.52%, 105% 105.49%);
+}
+
+#img2 {
+    clip-path: polygon(-1.67% 102.53%, -0.78% 7.82%, 102.71% -2.37%, 103.33% 94.85%);
+}
+
+#img3 {
+    clip-path: polygon(5.66% 92.42%, -0.11% 6.04%, 96.71% 2.19%, 95.67% 97.06%);
+}
+
+#img4 {
+    clip-path: polygon(-5.34% 85.33%, -2.11% -1.52%, 99.71% 3.01%, 100% 98.53%);
+}
+
+#img5 {
+    clip-path: polygon(-1.67% 102.53%, -4.45% 19.92%, 100.04% 0.95%, 105% 105.49%);
+}
+
+#img6 {
+    clip-path: polygon(5.66% 92.61%, 2.55% 5.91%, 103.71% 16.52%, 105% 105.49%);
+}
+
+#img7 {
+    clip-path: polygon(-1.67% 102.53%, -2.78% -0.7%, 104.04% 8.11%, 99.33% 96.24%);
+}
+
+#img8 {
+    clip-path: polygon(2.33% 97.47%, 1.55% 1.41%, 97.37% 3.87%, 98.67% 97.06%);
+}
+
+#img9 {
+    clip-path: polygon(53.99% 104.81%, -4.22% 79.37%, -2.45% -2.47%, 84.92% 0.86%, 98.04% 12.23%, 117.67% 102.97%);
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
+input{
+    display: block;
+}
+
+input[type=submit]{
+    margin: 2rem 0 2rem 0;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    background-color: coral;
+    color: white;
+    font-variant: small-caps;
+    border: 0.1rem solid coral;
+}
+
+input[type=submit]:hover{
+    
+    background-color: rgb(231, 120, 80);
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    display: inline;
+    margin: 0.3rem;
+}
+
+
+@media (max-width : 1200px){
+    html{
+        font-size: 16px;
+    }
+
+    #gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    aside{
+        background-image: url(../images/aside1.jpg);
+    }
+
+
+    nav ul{
+        padding-left: 20%;
+    }
+
+}
+
+@media (max-width : 800px) {
+    html{
+        font-size: 12px;
+    }
+
+    #gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #layout {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 1 1 20%;
+        background: url(../images/aside4.jpg);
+        background-size: 100%;
+    }
+
+    nav ul{
+        padding-left: 4%;
+    }
 }
